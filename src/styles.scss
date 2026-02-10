@@ -1,1 +1,36 @@
-/* You can add global styles to this file, and also import other style files */
+@use 'colors' as colors;
+@use 'typography' as typography;
+@use 'radius' as radius;
+
+/* Global Styles */
+:root {
+  /* Colors */
+  --primary: colors.$agilipay-primary;
+  --secondary: colors.$agilipay-secondary;
+  --bg: colors.$agilipay-bg;
+  --white: colors.$agilipay-white;
+  --text-main: colors.$agilipay-text-main;
+  --text-muted: colors.$agilipay-text-muted;
+  --success: colors.$agilipay-success;
+  --error: colors.$agilipay-error;
+  --warning: colors.$agilipay-warning;
+
+  /* Radius */
+  --radius: radius.$radius;
+
+  /* Typography */
+  --font-family: typography.$font-family-base;
+
+  --fs-xs: #{typography.$size-xs};
+  --fs-sm: #{typography.$size-sm};
+  --fs-md: #{typography.$size-md};
+  --fs-lg: #{typography.$size-lg};
+  --fs-xl: #{typography.$size-xl};
+  --fs-2xl: #{typography.$size-2xl};
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--bg);
+  color: var(--text-main);
+}
