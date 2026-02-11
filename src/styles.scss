@@ -1,6 +1,6 @@
-@use 'colors' as colors;
-@use 'typography' as typography;
-@use 'radius' as radius;
+@use './styles/tokens/colors' as colors;
+@use './styles/tokens/typography' as typography;
+@use './styles/tokens/radius' as radius;
 
 /* Global Styles */
 :root {
