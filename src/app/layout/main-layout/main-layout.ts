@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '../../../../node_modules/@angular/router/types/_router_module-chunk';
 import { Sidebar } from '../sidebar/sidebar';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'main-layout',
