@@ -1,0 +1,147 @@
+@use '../../../../styles/tokens/colors';
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+//TODO add at animation at another compoments
+.login-form__container {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.login-container {
+  display: flex;
+
+  height: 100vh;
+  width: 100vw;
+
+  .login-aside {
+    flex: 1;
+    background-color: var(--agilipay-bg);
+    color: var(--agilipay-primary-stronger);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    padding: 4rem;
+
+    .login-image-container {
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      max-width: 100px;
+      .logo {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    p {
+      text-align: center;
+      font-size: 1.4rem;
+      margin-top: 1rem;
+    }
+
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+}
+
+.login-form-section {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+
+  .login-form {
+    width: 100%;
+    max-width: 400px;
+    padding: 2rem;
+
+    &__title {
+      text-align: center;
+      font-size: 1.8rem;
+      margin: 0;
+      margin-bottom: 2rem;
+      color: var(--agilipay-primary-stronger);
+    }
+
+    &__container {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+      color: var(--agilipay-secondary);
+
+      .form-group {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+
+        .input-wrapper {
+          display: flex;
+          align-items: center;
+          position: relative;
+          width: 100%;
+        }
+
+        i,
+        .icon {
+          position: absolute;
+          left: 12px;
+          width: 20px;
+          height: 16px;
+          pointer-events: none;
+          opacity: 0.6;
+
+          .material-icons-outlined {
+            color: var(--agilipay-secondary);
+            font-size: 20px;
+          }
+        }
+
+        .form-input {
+          width: 100%;
+          padding: 0.75rem 1rem 0.75rem 3rem;
+          font-family: var(--font-family);
+          font-size: var(--fs-md);
+          border: 1px solid #e2e8f0;
+          border-radius: 6px;
+          outline: none;
+          transition: all 0.2s ease-in-out;
+
+          &::placeholder {
+            color: var(--text-muted);
+            opacity: 0.7;
+          }
+
+          &:focus {
+            border-color: var(--agilipay-primary);
+            box-shadow: 0 0 0 4px rgba(6, 182, 212, 0.1);
+            & + .material-icons-outlined {
+              color: var(--agilipay-primary-stronger);
+              transform: scale(1.05);
+            }
+          }
+        }
+      }
+
+      input {
+        padding: 0.8rem;
+        border-radius: 6px;
+        margin-top: 0.5rem;
+      }
+    }
+  }
+}
