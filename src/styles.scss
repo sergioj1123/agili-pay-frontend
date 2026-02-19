@@ -19,7 +19,7 @@
   --radius: radius.$radius;
 
   /* Typography */
-  --font-family: typography.$font-family-base;
+  --font-family: #{typography.$font-family-base};
 
   --fs-xs: #{typography.$size-xs};
   --fs-sm: #{typography.$size-sm};
