@@ -32,18 +32,6 @@
     align-content: center;
     padding: 4rem;
 
-    .login-image-container {
-      margin: 0 auto;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      max-width: 100px;
-      .logo {
-        width: 100%;
-        height: auto;
-      }
-    }
-
     p {
       text-align: center;
       font-size: 1.4rem;
@@ -53,6 +41,18 @@
     @media (max-width: 768px) {
       display: none;
     }
+  }
+}
+
+.login-image-container {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100px;
+  .logo {
+    width: 100%;
+    height: auto;
   }
 }
 
@@ -117,7 +117,7 @@
           font-family: var(--font-family);
           font-size: var(--fs-md);
           border: 1px solid #e2e8f0;
-          border-radius: 6px;
+          border-radius: var(--agilipay-radius);
           outline: none;
           transition: all 0.2s ease-in-out;
 
@@ -139,9 +139,24 @@
 
       input {
         padding: 0.8rem;
-        border-radius: 6px;
+        border-radius: var(--agilipay-radius);
         margin-top: 0.5rem;
       }
+    }
+  }
+
+  .forgot-password {
+    display: block;
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--agilipay-secondary);
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+
+    &:hover {
+      text-decoration: underline;
+      color: var(--agilipay-primary);
     }
   }
 }
