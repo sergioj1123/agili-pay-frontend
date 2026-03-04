@@ -1,0 +1,14 @@
+<div class="form-group">
+  @if (label) {
+    <label>{{ label }}</label>
+  }
+  <div class="input-wrapper">
+    <input [type]="type" [placeholder]="placeholder" [formControl]="control" class="form-input" />
+    @if (icon) {
+      <i class="material-icons-outlined">{{ icon }}</i>
+    }
+  </div>
+  @if (errorMessage) {
+    <span class="error-message"> {{ errorMessage }} </span>
+  }
+</div>
