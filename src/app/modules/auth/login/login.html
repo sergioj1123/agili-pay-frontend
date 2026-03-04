@@ -18,21 +18,20 @@
       <h2 class="login-form__title">Bem-vindo de volta ao AgiliPay</h2>
 
       <div class="login-form__container">
-        <div class="form-group">
-          <label>E-mail</label>
-          <div class="input-wrapper">
-            <input type="email" placeholder="seu@email.com" class="form-input" />
-            <i class="material-icons-outlined">email</i>
-          </div>
-        </div>
+        <input-field
+          label="E-mail"
+          type="email"
+          placeholder="seu@email.com"
+          icon="email"
+          [control]="emailControl"
+        ></input-field>
 
-        <div class="form-group">
-          <label>Senha</label>
-          <div class="input-wrapper">
-            <input type="password" placeholder="••••••••" class="form-input" />
-            <i class="material-icons-outlined">lock</i>
-          </div>
-        </div>
+        <input-field
+          label="Senha"
+          type="password"
+          icon="lock"
+          [control]="passwordControl"
+        ></input-field>
       </div>
 
       <a href="#" class="forgot-password">Esqueceu a senha?</a>
