@@ -84,18 +84,39 @@
     }
   }
 
-  .forgot-password {
-    display: block;
+  .button-group {
     margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
     text-align: center;
     font-size: 0.9rem;
-    color: var(--agilipay-secondary);
-    text-decoration: none;
-    transition: color 0.2s ease-in-out;
 
-    &:hover {
-      text-decoration: underline;
-      color: var(--agilipay-primary);
+    .forgot-password {
+      display: block;
+      color: var(--agilipay-secondary);
+      text-decoration: none;
+      transition: color 0.2s ease-in-out;
+
+      &:hover {
+        text-decoration: underline;
+        color: var(--agilipay-primary);
+      }
+    }
+
+    .signUp {
+      color: var(--agilipay-secondary);
+      text-decoration: none;
+      transition: all 0.2s ease-in-out;
+
+      a {
+        color: var(--agilipay-primary-stronger);
+      }
+
+      & a:hover {
+        cursor: pointer;
+        text-decoration: underline;
+      }
     }
   }
 }

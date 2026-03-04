@@ -34,9 +34,21 @@
         ></input-field>
       </div>
 
-      <a href="#" class="forgot-password">Esqueceu a senha?</a>
+      <div class="button-group">
+        <a href="#" class="forgot-password">Esqueceu a senha?</a>
 
-      <button type="submit" class="btn-primary">Entrar</button>
+        <app-button
+          variant="primary"
+          [fullWidth]="true"
+          (click)="login()"
+          [disabled]="!loginForm.valid"
+          >Entrar</app-button
+        >
+        <div class="signUp">
+          <span>Não tem uma conta? </span>
+          <a routerLink="/auth/signup">Cadastre-se</a>
+        </div>
+      </div>
     </form>
   </div>
 </div>
