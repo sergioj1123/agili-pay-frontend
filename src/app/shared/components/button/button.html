@@ -1,0 +1,20 @@
+<button
+  [type]="type"
+  [disabled]="disabled || loading"
+  [ngClass]="{
+    'btn-primary': variant === 'primary',
+    'btn-secondary': variant === 'secondary',
+    'full-width': fullWidth,
+  }"
+  class="base-button"
+  (click)="onClick.emit($event)"
+>
+  @if (!loading) {
+    <span>
+      <ng-content></ng-content>
+    </span>
+  }
+  @if (loading) {
+    <span class="loader"></span>
+  }
+</button>
